@@ -6,6 +6,8 @@ git config --global user.email "email
 git config --global user.name
 git config --global user.email
 
+git config --global core.editor "code --wait"
+
 git config --list
 
 git init                         - Inicializar um repositorio
@@ -25,5 +27,17 @@ git log                          - Mostra o historico dos commits
 git log --oneline                - Mostra o historico dos commits
 git log -p                       - Mostra o historico dos commits junto com o diff
 git log --stat                   - Mostra o historico dos commits junto com os arquivos que foram modificados
-git log --shortstat                   - Mostra o historico dos commits junto com os arquivos que foram modificados resumido
+git log --shortstat              - Mostra o historico dos commits junto com os arquivos que foram modificados resumido
+
+git commit --amend -m "texto"    - Alterar o texto do commit
+git commit --amend --no-edit     - Alterar o commit adicionando mais arquivos juntos
+
+git checkout dea0138             - Voltar para o commit que deseja
+git checkout main                - Voltar para a versão atual
+git checkout arquivo_teste.txt   - Volta o arquivo para a ultima versão
+git checkout .                   - Volta o repositorio para versão atual
+
+git clean -f                     - Remove o arquivo da lista de adicionado, funciona antes do commit e do add
+
+git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos já adicionados e ainda não adicionados
 
