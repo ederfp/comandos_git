@@ -41,3 +41,7 @@ git clean -f                     - Remove o arquivo da lista de adicionado, func
 
 git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos já adicionados e ainda não adicionados
 
+git update-index --skip-worktree <file>      - Para de rastrear o arquivo
+git update-index --no-skip-worktree <file>   - Voltar a rastrear o arquivo
+
+git clone <arquivo1> <arquivo2_clone>
