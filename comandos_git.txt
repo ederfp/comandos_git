@@ -11,7 +11,19 @@ git config --list
 git init                         - Inicializar um repositorio
 git status                       - Verificar o status do repositorio
 git add .                        - Adicionar arquivo no repositorio
+
 git rm --cached <file>           - Remover o arquivo do repositorio
 git rm --cached -r .             - Remover todos os arquivos do repositorio
+
 git commit -m "Versão Inicial"   - Salvar os arquivos no git
 git restore --staged <file>      - Descartar o arquivo antes de dar o commit
+
+git diff                         - Faz a comparação, mostrando o que será alterado
+git diff -- cached               - Faz a comparação, mostrando o que será alterado depois do add
+
+git log                          - Mostra o historico dos commits
+git log --oneline                - Mostra o historico dos commits
+git log -p                       - Mostra o historico dos commits junto com o diff
+git log --stat                   - Mostra o historico dos commits junto com os arquivos que foram modificados
+git log --shortstat                   - Mostra o historico dos commits junto com os arquivos que foram modificados resumido
+
