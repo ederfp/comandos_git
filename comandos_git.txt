@@ -1,0 +1,10 @@
+Comandos Git
+
+git config --global user.name "Eder Fornielles Pereira"
+git config --global user.email "ederfpereira@gmail.com"
+
+git config --global user.name
+git config --global user.email
+
+git config --list
+
