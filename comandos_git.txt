@@ -45,3 +45,8 @@ git update-index --skip-worktree <file>      - Para de rastrear o arquivo
 git update-index --no-skip-worktree <file>   - Voltar a rastrear o arquivo
 
 git clone <arquivo1> <arquivo2_clone>
+
+git remote add origin <url-github>          - Vincula o Git com o github
+git remote -v                               - Visualiza qual endereço esta vinculado
+git remote set-url origin <url-github>      - Troca o url vinculado
+
