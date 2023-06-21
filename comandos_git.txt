@@ -52,11 +52,19 @@ git remote set-url origin <url-github>      - Troca o url vinculado
 
 git branch               - Visualizar as branchs
 git branch <name>        - Criar branch
+git branch -d <name>     - Deletar a branch
+git branch -m <name>     - Muda o nome da branch
+git branch --no-merged   - Mostra quais branchs ainda não foram mergeadas
+git branch --merged      - Mostra quais branchs foram mergeadas
 
 git checkout <name>      - Mudar para a branch criada
 git checkout -b task_1   - Criar e já mudar para nova branch
 
-git switch <name>         - Mudar para a branch já criada
+git switch <name>         - Mudar para a branch criada
+git switch -c <name>      - Criar e já mudar para nova branch
 
-git push -u origin <name> - Enviar as mudanças da nova branch para o servidor
+git push -u origin <name>        - Enviar as mudanças da nova branch para o servidor
+git push --delete origin <name>  - Apagar a branch remota
 
+git merge <name>                - Dentro da main coloca a branch que foi feito as mudanças
+git merge --abort               - Abortar o merge
