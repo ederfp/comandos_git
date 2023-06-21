@@ -50,3 +50,13 @@ git remote add origin <url-github>          - Vincula o Git com o github
 git remote -v                               - Visualiza qual endereço esta vinculado
 git remote set-url origin <url-github>      - Troca o url vinculado
 
+git branch               - Visualizar as branchs
+git branch <name>        - Criar branch
+
+git checkout <name>      - Mudar para a branch criada
+git checkout -b task_1   - Criar e já mudar para nova branch
+
+git switch <name>         - Mudar para a branch já criada
+
+git push -u origin <name> - Enviar as mudanças da nova branch para o servidor
+
