@@ -17,11 +17,11 @@ git add .                        - Adicionar arquivo no repositorio
 git rm --cached <file>           - Remover o arquivo do repositorio
 git rm --cached -r .             - Remover todos os arquivos do repositorio
 
-git commit -m "Versão Inicial"   - Salvar os arquivos no git
 git restore --staged <file>      - Descartar o arquivo antes de dar o commit
 
 git diff                         - Faz a comparação, mostrando o que será alterado
 git diff -- cached               - Faz a comparação, mostrando o que será alterado depois do add
+git diff <id commit> <id commit>          - Mostra o que mudou entre os ids
 
 git log                          - Mostra o historico dos commits
 git log --oneline                - Mostra o historico dos commits
@@ -29,17 +29,27 @@ git log -p                       - Mostra o historico dos commits junto com o di
 git log --stat                   - Mostra o historico dos commits junto com os arquivos que foram modificados
 git log --shortstat              - Mostra o historico dos commits junto com os arquivos que foram modificados resumido
 
+git commit -m "Versão Inicial"   - Salvar os arquivos no git
 git commit --amend -m "texto"    - Alterar o texto do commit
 git commit --amend --no-edit     - Alterar o commit adicionando mais arquivos juntos
+git commit -a -m  "msg"          - Dar o commit usando -a que é o add
+
+git revert HEAD                  - Reverter o último commit
+git revert <id commit>           - Reverter o para o commit desejado
+git revert -no--edit
 
 git checkout dea0138             - Voltar para o commit que deseja
 git checkout main                - Voltar para a versão atual
 git checkout arquivo_teste.txt   - Volta o arquivo para a ultima versão
 git checkout .                   - Volta o repositorio para versão atual
+git checkout <name>              - Mudar para a branch criada
+git checkout -b <name>           - Criar e já mudar para nova branch
 
 git clean -f                     - Remove o arquivo da lista de adicionado, funciona antes do commit e do add
 
 git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos já adicionados e ainda não adicionados
+git reset --hard HEAD~1          - Voltar a apagar o ultimo commit
+git reset --mixed HEAD~1         - Remove o ultimo commit, porém não volta o que foi feito
 
 git update-index --skip-worktree <file>      - Para de rastrear o arquivo
 git update-index --no-skip-worktree <file>   - Voltar a rastrear o arquivo
@@ -57,10 +67,8 @@ git branch -m <name>     - Muda o nome da branch
 git branch --no-merged   - Mostra quais branchs ainda não foram mergeadas
 git branch --merged      - Mostra quais branchs foram mergeadas
 
-git checkout <name>      - Mudar para a branch criada
-git checkout -b task_1   - Criar e já mudar para nova branch
-
 git switch <name>         - Mudar para a branch criada
+git switch -              - Volta para a branch main
 git switch -c <name>      - Criar e já mudar para nova branch
 
 git push -u origin <name>        - Enviar as mudanças da nova branch para o servidor
@@ -68,3 +76,27 @@ git push --delete origin <name>  - Apagar a branch remota
 
 git merge <name>                - Dentro da main coloca a branch que foi feito as mudanças
 git merge --abort               - Abortar o merge
+
+git tag V1                                - Criar tag
+git tag -a -m "mensagem" V2               - Criar tag com comentário
+git show <tag>                            - Mostra informações da tag
+git tag -l                                - Mostra todas as tags criada
+git tag -n                                - Mostras todas as tags criadas com comentário
+git tag V0 <ID commit>                    - Cria tag em commit antigo
+git tag -a -m "mensagem" V0 <ID commit>   - Cria tag em commit antigo com comentário
+git push origin <tag>                     - Enviar tag para o Github
+git push --tags                           - Envia todas as tags para o Github
+git checkout <tag>                        - Entra na tag
+git diff <tag> <tag>                      - Mostra o que mudou entre as tags
+git tag -d <tag>                          - Deletar a tag localmente
+git push --delete origin <tag>            - Deletar a tag no Github
+
+git stash                       - Salvar mudanças no git sem precisar comitar
+git stash list                  - Listas as mudanças salvas
+git stash apply                 - Aplicar as mudanças salvas
+git stash apply <id stash>      - Aplicar as mudanças salvas no stash especifico
+git stash pop                   - Aplicar as mudanças salvas removendo do stash
+git stash pop <id stash>        - Aplicar as mudanças salvas removendo do stash no stash especifico
+git stash drop                  - Remover o stash
+git stash drop <id stash>       - Remover o stash especifico
+git stash branch <nome branch>  - Salvar mudança em outra branch
