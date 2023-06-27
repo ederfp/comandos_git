@@ -57,10 +57,6 @@ git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos 
 git reset --hard HEAD~1          - esfazer o commit
 git reset --mixed HEAD~1         - Desfazer o commit e deixar as mudanças na área de trabalho (commit)
 git reset --soft  HEAD~1         - Desfazer o commit e deixar as mudanças na área de preparação (add)
-<<<<<<< HEAD
-
-=======
->>>>>>> 137672cec0b05ed64598a7f0349a465917ecae84
 
 git update-index --skip-worktree <file>      - Para de rastrear o arquivo
 git update-index --no-skip-worktree <file>   - Voltar a rastrear o arquivo
