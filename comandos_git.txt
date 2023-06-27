@@ -54,7 +54,7 @@ git clean -f                     - Remove o arquivo da lista de adicionado, func
 
 git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos já adicionados e ainda não adicionados
 
-git reset --hard HEAD~1          - esfazer o commit
+git reset --hard HEAD~1          - Desfazer o commit
 git reset --mixed HEAD~1         - Desfazer o commit e deixar as mudanças na área de trabalho (commit)
 git reset --soft  HEAD~1         - Desfazer o commit e deixar as mudanças na área de preparação (add)
 
@@ -79,8 +79,9 @@ git switch -              - Volta para a branch main
 git switch -c <name>      - Criar e já mudar para nova branch
 
 git push -u origin <name>        - Enviar as mudanças da nova branch para o servidor
-git push --delete origin <name>  - Apagar a branch remota
+git push --delete origin <name>  - Apagar a branch do Github
 git push --force                 - Apagar o repositorio no Github e enviar o repositorio local ao Github
+git push --force-with-lease      - Forçar um push sem perder as outras alterações
 
 git merge <name>                - Dentro da main coloca a branch que foi feito as mudanças
 git merge --abort               - Abortar o merge
