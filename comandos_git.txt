@@ -53,6 +53,7 @@ git checkout -b <name>           - Criar e já mudar para nova branch
 git clean -f                     - Remove o arquivo da lista de adicionado, funciona antes do commit e do add
 
 git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos já adicionados e ainda não adicionados
+
 git reset --hard HEAD~1          - esfazer o commit
 git reset --mixed HEAD~1         - Desfazer o commit e deixar as mudanças na área de trabalho (commit)
 git reset --soft  HEAD~1         - Desfazer o commit e deixar as mudanças na área de preparação (add)
