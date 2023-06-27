@@ -10,9 +10,14 @@ git config --global core.editor "code --wait"
 
 git config --list
 
+------------------------------------------------------------------------
+Sequência:
 git init                         - Inicializar um repositorio
 git status                       - Verificar o status do repositorio
 git add .                        - Adicionar arquivo no repositorio
+git commit -m ""                 - Comitar
+git push                         - Enviar ao Github
+------------------------------------------------------------------------
 
 git rm --cached <file>           - Remover o arquivo do repositorio
 git rm --cached -r .             - Remover todos os arquivos do repositorio
@@ -48,8 +53,10 @@ git checkout -b <name>           - Criar e já mudar para nova branch
 git clean -f                     - Remove o arquivo da lista de adicionado, funciona antes do commit e do add
 
 git reset --hard                 - Volta os arquivos ao ultimo commit, arquivos já adicionados e ainda não adicionados
-git reset --hard HEAD~1          - Voltar a apagar o ultimo commit
-git reset --mixed HEAD~1         - Remove o ultimo commit, porém não volta o que foi feito
+
+git reset --hard HEAD~1          - esfazer o commit
+git reset --mixed HEAD~1         - Desfazer o commit e deixar as mudanças na área de trabalho (commit)
+git reset --soft  HEAD~1         - Desfazer o commit e deixar as mudanças na área de preparação (add)
 
 git update-index --skip-worktree <file>      - Para de rastrear o arquivo
 git update-index --no-skip-worktree <file>   - Voltar a rastrear o arquivo
@@ -73,6 +80,7 @@ git switch -c <name>      - Criar e já mudar para nova branch
 
 git push -u origin <name>        - Enviar as mudanças da nova branch para o servidor
 git push --delete origin <name>  - Apagar a branch remota
+git push --force                 - Apagar o repositorio no Github e enviar o repositorio local ao Github
 
 git merge <name>                - Dentro da main coloca a branch que foi feito as mudanças
 git merge --abort               - Abortar o merge
