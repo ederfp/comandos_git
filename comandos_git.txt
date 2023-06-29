@@ -109,3 +109,9 @@ git stash pop <id stash>        - Aplicar as mudanças salvas removendo do stash
 git stash drop                  - Remover o stash
 git stash drop <id stash>       - Remover o stash especifico
 git stash branch <nome branch>  - Salvar mudança em outra branch
+
+git rebase <branch main>        - Fazer essa rebase dentro da branch criada e não da main
+git merge <branch criada>       - Fazer o merge depois do rebase dentro da main, para trazer todas as mudanças da branch criada
+git rebase --abort              - Abortar o rebase caso localize um conflito
+git rebase -- continue          - Fazer depois que corrigir o conflito
+git pull -- rebase              - Trazer as mudanças do repositório clone mesclando com as minhas mudanças
